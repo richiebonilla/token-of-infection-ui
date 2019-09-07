@@ -16,5 +16,10 @@
   "bugs": {
     "url": "https://github.com/kaio-ken/token-of-infection-ui/issues"
   },
-  "homepage": "https://github.com/kaio-ken/token-of-infection-ui#readme"
+  "homepage": "https://github.com/kaio-ken/token-of-infection-ui#readme",
+  "dependencies": {
+    "config": "^3.2.2",
+    "express": "^4.17.1",
+    "mongoose": "^5.6.13"
+  }
 }
