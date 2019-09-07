@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/kaio-ken/token-of-infection-ui/issues"
   },
-  "homepage": "https://github.com/kaio-ken/token-of-infection-ui#readme"
+  "homepage": "https://github.com/kaio-ken/token-of-infection-ui#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
