@@ -1,6 +1,5 @@
 import React, { Component } from "react";
-import PropTypes from "prop-types";
-import styles from "./Messages.scss";
+import "./Messages.scss";
 
 class Messages extends Component {
   render() {
@@ -21,7 +20,7 @@ class Messages extends Component {
     return (
       <div className="messages-container">
         {this.props.messages.map(msg => (
-          <div key={msg.id} className="message" style={{ display: "flex" }}>
+          <div key={msg._id} className="message" style={{ display: "flex" }}>
             <div style={{ fontSize: "32px", paddingRight: "12px" }}>
               {msg.team === "zombie"
                 ? "🧟"

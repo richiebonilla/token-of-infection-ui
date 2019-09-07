@@ -30,7 +30,6 @@ class MessageBoard extends Component {
   };
 
   updateMessageBoard = () => {
-    console.log("hello");
     axios.get("/api/getMessages/").then(res => {
       console.log(res);
       this.setState({ messages: res.data });
@@ -39,25 +38,23 @@ class MessageBoard extends Component {
 
   render() {
     return (
-      <div style={{}}>
-        <div className="message-board body">
-          <div>
-            <h3 style={{ marginBottom: "12px", marginLeft: "12px" }}>
-              Message Board
-            </h3>
-          </div>
-          <div className="comment-box">
-            <form type="POST" onSubmit={this.handleSubmit}>
-              <textarea
-                onChange={this.handleChange}
-                value={this.state.message}
-                placeholder="Add your message..."
-              />
-              <input type="submit" />
-            </form>
-          </div>
-          <Messages messages={this.state.messages} />
+      <div className="message-board body">
+        <div>
+          <h3 style={{ marginBottom: "12px", marginLeft: "12px" }}>
+            Message Board
+          </h3>
         </div>
+        <div className="comment-box">
+          <form type="POST" onSubmit={this.handleSubmit}>
+            <textarea
+              onChange={this.handleChange}
+              value={this.state.message}
+              placeholder="Add your message..."
+            />
+            <input type="submit" />
+          </form>
+        </div>
+        <Messages messages={this.state.messages} />
       </div>
     );
   }

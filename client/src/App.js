@@ -70,7 +70,6 @@ class App extends Component {
         </div>
         <div
           style={{
-            height: "100%",
             maxWidth: "360px",
             minWidth: "280px",
             paddingLeft: "16px",

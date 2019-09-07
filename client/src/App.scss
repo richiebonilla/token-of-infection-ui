@@ -3,6 +3,11 @@ $bgColor: #000;
 $zombieColor: #ff92d1;
 $humanColor: #eff99c;
 
+html,
+body {
+  height: 100%;
+}
+
 html {
   background: $bgColor;
 }
