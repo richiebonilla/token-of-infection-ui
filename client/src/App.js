@@ -30,7 +30,7 @@ class App extends Component {
   render() {
     return (
       <div style={{ display: "flex", height: "100%" }}>
-        <div style={{ flexGrow: 1 }}>
+        <div style={{ flexGrow: 1, overflowY: "scroll" }}>
           <h2
             className={
               this.state.team === "human" ? "humanColor" : "zombieColor"
