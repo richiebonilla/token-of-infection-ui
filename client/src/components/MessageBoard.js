@@ -23,7 +23,7 @@ class MessageBoard extends Component {
       .post("/api/newMessage/", { message })
       .then(res => {
         console.log(res);
-        this.setState({ messages: res.data });
+        this.setState({ messages: res.data.reverse() });
       })
       .catch(err => console.log(new Error(err)));
     e.preventDefault();
