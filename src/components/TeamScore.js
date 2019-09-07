@@ -3,8 +3,16 @@ import "./TeamScore.scss";
 
 class TeamScore extends Component {
   state = {
-    percent: Math.round((this.props.count / this.props.total) * 100)
+    percent: this.calculatePercent(this.props.count, this.props.total)
   };
+
+  calculatePercent(count, total) {
+    return Math.round((count / total) * 100);
+  }
+
+  componentWillReceiveProps(nextProps) {
+    this.setState({ percent: this.calculatePercent(nextProps.count, nextProps.total) });
+  }
 
   render() {
     return (
