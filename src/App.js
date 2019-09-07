@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+//import Web3Connect from "web3connect";
+import web3Helper from "./web3/web3-helper.js";
 import TeamScore from "./components/TeamScore.js";
 import TugOfWar from "./components/TugOfWar.js";
 import MessageBoard from "./components/MessageBoard.js";
@@ -7,16 +9,19 @@ import "./App.scss";
 class App extends Component {
   state = {
     team: "zombie",
-    humans: {
-      count: 789
-    },
-    zombies: {
-      count: 1024
-    }
+    humanCount: 789,
+    zombieCount: 1024
   };
 
   componentDidMount() {
     // get data and set state
+    this.updateCounts();
+  }
+
+  async updateCounts() {
+    let humanCount = await web3Helper.humanCount();
+    let zombieCount = await web3Helper.zombieCount();
+    this.setState({humanCount:humanCount, zombieCount:zombieCount});
   }
 
   render() {
@@ -41,22 +46,22 @@ class App extends Component {
               <div>
                 <TeamScore
                   name="humans"
-                  count={this.state.humans.count}
-                  total={this.state.zombies.count + this.state.humans.count}
+                  count={this.state.humanCount}
+                  total={this.state.zombieCount + this.state.humanCount}
                 />
               </div>
               <div>
                 <TeamScore
                   name="zombies"
-                  count={this.state.zombies.count}
-                  total={this.state.zombies.count + this.state.humans.count}
+                  count={this.state.zombieCount}
+                  total={this.state.zombieCount + this.state.humanCount}
                 />
               </div>
             </div>
           </div>
           <TugOfWar
-            zombies={this.state.zombies.count}
-            humans={this.state.humans.count}
+            zombies={this.state.zombieCount}
+            humans={this.state.humanCount}
           />
         </div>
         <div
