@@ -22,14 +22,20 @@ html {
   }
 }
 
+.left-side-wrapper {
+  padding-bottom: 64px;
+
+  @media screen and (max-width: 576px) {
+    padding-bottom: 0;
+  }
+}
+
 .scoreboard {
-  text-align: center;
+  display: flex;
 
   &-inner {
     display: flex;
     margin: auto;
-    max-width: 560px;
-    width: 100%;
 
     @media screen and (max-width: 576px) {
       display: block;
@@ -43,10 +49,10 @@ html {
   min-width: 280px;
   padding-left: 16px;
   padding-right: 16px;
-  border-left: solid 1px rbga(255, 255, 255, 0.2);
+  border-left: solid 1px #555;
 
   @media screen and (max-width: 576px) {
-    border-top: solid 1px rgba(255, 255, 255, 0.2);
+    border-top: solid 1px #555;
     border-left: none;
     max-width: none;
     padding-top: 32px;

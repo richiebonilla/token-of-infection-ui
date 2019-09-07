@@ -30,7 +30,7 @@ class App extends Component {
   render() {
     return (
       <div className="app-wrapper">
-        <div className="scrollable" style={{ flexGrow: 1 }}>
+        <div className="left-side-wrapper scrollable" style={{ flexGrow: 1 }}>
           <h2
             className={
               this.state.humanCount > this.state.zombieCount
@@ -38,18 +38,24 @@ class App extends Component {
                 : "zombieColor"
             }
             style={{
-              fontWeight: 400,
+              fontWeight: 800,
               marginTop: "66px",
               textAlign: "center"
             }}
           >
             {this.state.humanCount > this.state.zombieCount
               ? "The humans are winning!"
-              : "The zombies are winning!"}
+              : this.state.humanCount < this.state.zombieCount
+              ? "The zombies are winning!"
+              : "It's a tie!"}
           </h2>
           <h3
-            class="secondary"
-            style={{ marginBottom: "56px", textAlign: "center", marginTop: 0 }}
+            style={{
+              fontWeight: 400,
+              marginBottom: "56px",
+              textAlign: "center",
+              marginTop: 0
+            }}
           >
             You are a
             {this.state.team === "zombie" ? (
