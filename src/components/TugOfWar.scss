@@ -1,0 +1,18 @@
+$zombieColor: #ff92d1;
+$humanColor: #eff99c;
+
+.zombie-pixel {
+  display: inline-block;
+  margin-right: 2px;
+  height: 10px;
+  width: 4px;
+  background: $zombieColor;
+}
+
+.human-pixel {
+  display: inline-block;
+  margin-right: 2px;
+  height: 10px;
+  width: 4px;
+  background: $humanColor;
+}

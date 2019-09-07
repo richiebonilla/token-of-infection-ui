@@ -1,0 +1,28 @@
+$bgColor: #000;
+
+.message-board {
+  margin: auto;
+  width: 560px;
+}
+
+.messages-container {
+  text-align: left;
+}
+
+.message {
+  padding: 16px 8px;
+
+  &__body {
+    color: #fff;
+    margin-bottom: 8px;
+  }
+
+  &__caption {
+    display: flex;
+  }
+
+  &__author {
+    color: lighten($bgColor, 35%);
+    margin-right: 10px;
+  }
+}

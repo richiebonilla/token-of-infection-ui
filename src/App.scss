@@ -1,0 +1,26 @@
+@import "typography.scss";
+$bgColor: #000;
+$zombieColor: #ff92d1;
+$humanColor: #eff99c;
+
+html {
+  background: $bgColor;
+}
+
+.scoreboard {
+  text-align: center;
+
+  &-inner {
+    display: flex;
+    margin: auto;
+    width: 560px;
+  }
+}
+
+.zombieColor {
+  color: $zombieColor;
+}
+
+.humanColor {
+  color: $humanColor;
+}
