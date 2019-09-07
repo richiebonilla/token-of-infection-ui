@@ -5,12 +5,17 @@ import axios from "axios";
 
 class MessageBoard extends Component {
   state = {
+    account: {},
     message: "",
     messages: []
   };
 
   componentDidMount() {
     this.updateMessageBoard();
+    const accounts = ethereum.enable();
+    const account = account[0];
+
+    this.setState({ account });
   }
 
   handleChange = e => {
