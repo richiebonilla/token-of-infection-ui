@@ -33,17 +33,31 @@ class App extends Component {
         <div style={{ flexGrow: 1, overflowY: "scroll" }}>
           <h2
             className={
-              this.state.team === "human" ? "humanColor" : "zombieColor"
+              this.state.humanCount > this.state.zombieCount
+                ? "humanColor"
+                : "zombieColor"
             }
             style={{
               fontWeight: 400,
               marginTop: "66px",
-              marginBottom: "56px",
               textAlign: "center"
             }}
           >
-            You are a {this.state.team}
+            {this.state.humanCount > this.state.zombieCount
+              ? "The humans are winning!"
+              : "The zombies are winning!"}
           </h2>
+          <h3
+            class="secondary"
+            style={{ marginBottom: "56px", textAlign: "center", marginTop: 0 }}
+          >
+            You are a
+            {this.state.team === "zombie" ? (
+              <span className="zombieColor"> {this.state.team}</span>
+            ) : (
+              <span className="humanColor"> {this.state.team}</span>
+            )}
+          </h3>
           <div className="scoreboard">
             <div className="scoreboard-inner">
               <div>
