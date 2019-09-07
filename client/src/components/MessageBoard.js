@@ -23,7 +23,7 @@ class MessageBoard extends Component {
       .post("/api/newMessage/", { message })
       .then(res => {
         console.log(res);
-        this.setState({ messages: res.data.reverse() });
+        this.setState({ message: "", messages: res.data.reverse() });
       })
       .catch(err => console.log(new Error(err)));
     e.preventDefault();
@@ -31,7 +31,6 @@ class MessageBoard extends Component {
 
   updateMessageBoard = () => {
     axios.get("/api/getMessages/").then(res => {
-      console.log(res);
       this.setState({ messages: res.data });
     });
   };
@@ -46,12 +45,12 @@ class MessageBoard extends Component {
         </div>
         <div className="comment-box">
           <form type="POST" onSubmit={this.handleSubmit}>
-            <textarea
+            <input
               onChange={this.handleChange}
               value={this.state.message}
               placeholder="Add your message..."
             />
-            <input type="submit" />
+            <input type="submit" value="POST" />
           </form>
         </div>
         <Messages messages={this.state.messages} />
