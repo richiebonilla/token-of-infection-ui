@@ -30,7 +30,7 @@ class Messages extends Component {
               <div className="message__body caption">{msg.message}</div>
               <div className="message__caption">
                 <div className="message__author caption disabled">
-                  {msg.author} at {msg.time}
+                  {msg.author}
                 </div>
               </div>
             </div>
