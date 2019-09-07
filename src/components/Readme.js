@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import "./Readme.scss";
 
 class Readme extends Component {
   render() {
@@ -52,11 +53,9 @@ class Readme extends Component {
         </ol>
         <p class="body white">
           All is fair in love and war. Especially during an apocalypse.
-        </p>
-        <br />
-        <p class="body white">
-          Good luck,
-          <br />A mad, mad scientist
+          <br />
+          <br />
+          Good luck, <br />A mad, mad scientist
         </p>
       </div>
     );

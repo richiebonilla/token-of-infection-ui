@@ -5,56 +5,6 @@ class MessageBoard extends Component {
   state = {
     messages: [
       {
-        id: 1,
-        author: "John Appleseed",
-        team: "zombie",
-        message:
-          "hello, i'm trying to infect more people. does anyone have any enemies I can send a token of infection to?",
-        time: "2019-09-06 23:53:46"
-      },
-      {
-        id: 2,
-        author: "John Appleseed",
-        team: "yellow",
-        message: "hello world",
-        time: "2019-09-06 23:53:46"
-      },
-      {
-        id: 3,
-        author: "John Appleseed",
-        team: "yellow",
-        message: "hello world",
-        time: "2019-09-06 23:53:46"
-      },
-      {
-        id: 4,
-        author: "John Appleseed",
-        team: "yellow",
-        message: "hello world",
-        time: "2019-09-06 23:53:46"
-      },
-      {
-        id: 5,
-        author: "John Appleseed",
-        team: "yellow",
-        message: "hello world",
-        time: "2019-09-06 23:53:46"
-      },
-      {
-        id: 6,
-        author: "John Appleseed",
-        team: "yellow",
-        message: "hello world",
-        time: "2019-09-06 23:53:46"
-      },
-      {
-        id: 7,
-        author: "John Appleseed",
-        team: "yellow",
-        message: "hello world",
-        time: "2019-09-06 23:53:46"
-      },
-      {
         id: 8,
         author: "John Appleseed",
         team: "zombie",
