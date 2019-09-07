@@ -10,8 +10,8 @@ import "./App.scss";
 class App extends Component {
   state = {
     team: "zombie",
-    humanCount: 789,
-    zombieCount: 1024
+    humanCount: 0,
+    zombieCount: 0
   };
 
   componentDidMount() {
@@ -48,14 +48,20 @@ class App extends Component {
                 <TeamScore
                   name="humans"
                   count={this.state.humanCount}
-                  total={parseInt(this.state.zombieCount, 10) + parseInt(this.state.humanCount, 10)}
+                  total={
+                    parseInt(this.state.zombieCount, 10) +
+                    parseInt(this.state.humanCount, 10)
+                  }
                 />
               </div>
               <div>
                 <TeamScore
                   name="zombies"
                   count={this.state.zombieCount}
-                  total={parseInt(this.state.zombieCount, 10) + parseInt(this.state.humanCount, 10)}
+                  total={
+                    parseInt(this.state.zombieCount, 10) +
+                    parseInt(this.state.humanCount, 10)
+                  }
                 />
               </div>
             </div>
