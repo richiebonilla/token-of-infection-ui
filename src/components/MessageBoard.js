@@ -91,10 +91,19 @@ class MessageBoard extends Component {
         }}
       >
         <div className="message-board body">
-          <h3 style={{ marginBottom: "12px", marginLeft: "12px" }}>
-            Message Board
-          </h3>
+          <div>
+            <h3 style={{ marginBottom: "12px", marginLeft: "12px" }}>
+              Message Board
+            </h3>
+            <button>post</button>
+          </div>
           <div className="messages-container">
+            <div className="comment-box">
+              <form type="POST">
+                <texarea placeholder="Add your message..." />
+                <input type="submit" />
+              </form>
+            </div>
             {this.state.messages.map(msg => (
               <div key={msg.id} className="message" style={{ display: "flex" }}>
                 <div style={{ fontSize: "32px", paddingRight: "12px" }}>

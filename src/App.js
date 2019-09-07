@@ -4,6 +4,7 @@ import web3Helper from "./web3/web3-helper.js";
 import TeamScore from "./components/TeamScore.js";
 import TugOfWar from "./components/TugOfWar.js";
 import MessageBoard from "./components/MessageBoard.js";
+import Readme from "./components/Readme.js";
 import "./App.scss";
 
 class App extends Component {
@@ -21,7 +22,7 @@ class App extends Component {
   async updateCounts() {
     let humanCount = await web3Helper.humanCount();
     let zombieCount = await web3Helper.zombieCount();
-    this.setState({humanCount:humanCount, zombieCount:zombieCount});
+    this.setState({ humanCount: humanCount, zombieCount: zombieCount });
   }
 
   render() {
@@ -63,6 +64,7 @@ class App extends Component {
             zombies={this.state.zombieCount}
             humans={this.state.humanCount}
           />
+          <Readme />
         </div>
         <div
           style={{
