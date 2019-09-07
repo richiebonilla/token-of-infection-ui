@@ -56,10 +56,6 @@ app.listen(process.env.PORT || config.port, () =>
   console.log(`Listening on port ${process.env.PORT || config.port}...`)
 );
 
-//
-// TODO : Store connection url as env variable
-//
-
 console.log(config.db);
 
 mongoose

@@ -1,0 +1,20 @@
+{
+  "name": "token_of_infection",
+  "version": "1.0.0",
+  "description": "A game that is definitely not spam",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kaio-ken/token-of-infection-ui.git"
+  },
+  "author": "Ben Heidorn, Dani Grant, Marguerite deCourcelle, Richie Bonilla",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kaio-ken/token-of-infection-ui/issues"
+  },
+  "homepage": "https://github.com/kaio-ken/token-of-infection-ui#readme"
+}
