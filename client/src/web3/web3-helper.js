@@ -2,7 +2,7 @@ const Web3 = require("web3");
 
 var getContractAddress = function(network = "mainnet") {
   if (network === "rinkeby") {
-    return "0x696Ba64bD47Db0e51323aEf20803903be7a71F3a";
+    return "0x407869B4e9E4c0455f4f5f6abACe2808534B22F0";
   }
   return "";
 };
