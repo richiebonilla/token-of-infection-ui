@@ -87,25 +87,27 @@ class MessageBoard extends Component {
       <div
         style={{
           display: "flex",
-          justifyContent: "center",
-          paddingTop: "64px"
+          justifyContent: "center"
         }}
       >
-        <div className="message-board body" style={{ textAlign: "center" }}>
-          <h2>Message Board</h2>
+        <div className="message-board body">
+          <h3 style={{ marginBottom: "12px", marginLeft: "12px" }}>
+            Message Board
+          </h3>
           <div className="messages-container">
             {this.state.messages.map(msg => (
-              <div key={msg.id} className="message">
-                <div className="message__body">{msg.message}</div>
-                <div className="message__caption">
-                  <div className="message__author">
-                    <span style={{ fontSize: "24px", marginRight: "10px" }}>
-                      {msg.team === "zombie"
-                        ? "🧟"
-                        : people[Math.floor(Math.random() * people.length)]}
-                    </span>
-                    {msg.author} at
-                    {msg.time}
+              <div key={msg.id} className="message" style={{ display: "flex" }}>
+                <div style={{ fontSize: "32px", paddingRight: "12px" }}>
+                  {msg.team === "zombie"
+                    ? "🧟"
+                    : people[Math.floor(Math.random() * people.length)]}
+                </div>
+                <div>
+                  <div className="message__body caption">{msg.message}</div>
+                  <div className="message__caption">
+                    <div className="message__author caption disabled">
+                      {msg.author} at {msg.time}
+                    </div>
                   </div>
                 </div>
               </div>

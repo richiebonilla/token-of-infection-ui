@@ -1,9 +1,9 @@
-@import url("https://fonts.googleapis.com/css?family=Poiret+One");
+@import url("https://fonts.googleapis.com/css?family=Share+Tech+Mono|VT323&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Roboto");
 
 /* Var setups */
 
-$Fira: "Fira Code", Helvetica, Arial, sans-serif;
+$Monospace: "Share Tech Mono", monospace;
 $Roboto: "Roboto", Helvetica, Arial, sans-serif;
 
 /* Various */
@@ -45,8 +45,8 @@ $Roboto: "Roboto", Helvetica, Arial, sans-serif;
  *********************** TEXT STYLES *************************
  *************************************************************/
 
-$headline-font: $Fira;
-$copy-font: $Fira;
+$headline-font: $Monospace;
+$copy-font: $Roboto;
 
 @mixin text-tints {
   color: #fff;
@@ -159,7 +159,7 @@ a {
 @media screen and (min-width: 768px) {
   h1,
   .h1 {
-    font-size: 2.5rem;
+    font-size: 3rem;
     line-height: 1.4;
   }
 

@@ -14,7 +14,7 @@ class TeamScore extends Component {
           className={
             this.props.name === "zombies" ? "zombieColor" : "humanColor"
           }
-          style={{ marginTop: 0, marginBottom: "56px", fontWeight: 400 }}
+          style={{ marginTop: 0, marginBottom: "44px", fontWeight: 400 }}
         >
           {this.props.name}
         </h3>
