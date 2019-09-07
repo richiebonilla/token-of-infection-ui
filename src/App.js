@@ -48,14 +48,14 @@ class App extends Component {
                 <TeamScore
                   name="humans"
                   count={this.state.humanCount}
-                  total={this.state.zombieCount + this.state.humanCount}
+                  total={parseInt(this.state.zombieCount, 10) + parseInt(this.state.humanCount, 10)}
                 />
               </div>
               <div>
                 <TeamScore
                   name="zombies"
                   count={this.state.zombieCount}
-                  total={this.state.zombieCount + this.state.humanCount}
+                  total={parseInt(this.state.zombieCount, 10) + parseInt(this.state.humanCount, 10)}
                 />
               </div>
             </div>
