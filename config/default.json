@@ -1,0 +1,4 @@
+{
+  "db": "mongodb://localhost/token_of_infection",
+  "port": "8000"
+}
