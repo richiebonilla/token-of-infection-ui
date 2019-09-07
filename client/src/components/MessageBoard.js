@@ -61,7 +61,7 @@ class MessageBoard extends Component {
               type="text"
               onChange={this.handleChange}
               value={this.state.message}
-              placeholder="Add your message..."
+              placeholder="CaN I hAz InFeCtIoN??"
             />
             <button type="submit">POST</button>
           </form>
