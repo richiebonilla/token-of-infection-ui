@@ -29,8 +29,8 @@ class App extends Component {
 
   render() {
     return (
-      <div style={{ display: "flex", height: "100%" }}>
-        <div style={{ flexGrow: 1, overflowY: "scroll" }}>
+      <div className="app-wrapper">
+        <div className="scrollable" style={{ flexGrow: 1 }}>
           <h2
             className={
               this.state.humanCount > this.state.zombieCount
@@ -60,20 +60,16 @@ class App extends Component {
           </h3>
           <div className="scoreboard">
             <div className="scoreboard-inner">
-              <div>
-                <TeamScore
-                  name="humans"
-                  count={this.state.humanCount}
-                  total={this.state.zombieCount + this.state.humanCount}
-                />
-              </div>
-              <div>
-                <TeamScore
-                  name="zombies"
-                  count={this.state.zombieCount}
-                  total={this.state.zombieCount + this.state.humanCount}
-                />
-              </div>
+              <TeamScore
+                name="humans"
+                count={this.state.humanCount}
+                total={this.state.zombieCount + this.state.humanCount}
+              />
+              <TeamScore
+                name="zombies"
+                count={this.state.zombieCount}
+                total={this.state.zombieCount + this.state.humanCount}
+              />
             </div>
           </div>
           <TugOfWar
@@ -82,16 +78,7 @@ class App extends Component {
           />
           <Readme />
         </div>
-        <div
-          style={{
-            maxWidth: "360px",
-            minWidth: "280px",
-            paddingLeft: "16px",
-            paddingRight: "16px",
-            borderLeft: "solid 1px rgba(255,255,255,0.2)",
-            overflowY: "scroll"
-          }}
-        >
+        <div className="messageboard-container scrollable">
           <MessageBoard />
         </div>
       </div>

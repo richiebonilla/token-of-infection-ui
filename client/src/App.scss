@@ -12,13 +12,53 @@ html {
   background: $bgColor;
 }
 
+.app-wrapper {
+  display: flex;
+  height: 100%;
+
+  @media screen and (max-width: 576px) {
+    flex-direction: column;
+    padding: 12px;
+  }
+}
+
 .scoreboard {
   text-align: center;
 
   &-inner {
     display: flex;
     margin: auto;
-    width: 560px;
+    max-width: 560px;
+    width: 100%;
+
+    @media screen and (max-width: 576px) {
+      display: block;
+      margin-bottom: 24px;
+    }
+  }
+}
+
+.messageboard-container {
+  max-width: 360px;
+  min-width: 280px;
+  padding-left: 16px;
+  padding-right: 16px;
+  border-left: solid 1px rbga(255, 255, 255, 0.2);
+
+  @media screen and (max-width: 576px) {
+    border-top: solid 1px rgba(255, 255, 255, 0.2);
+    border-left: none;
+    max-width: none;
+    padding-top: 32px;
+    margin-top: 32px;
+  }
+}
+
+.scrollable {
+  overflow-y: scroll;
+
+  @media screen and (max-width: 576px) {
+    overflow-y: inherit;
   }
 }
 
