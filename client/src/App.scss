@@ -60,6 +60,17 @@ html {
   }
 }
 
+a.cta {
+  text-decoration: none;
+  text-transform: uppercase;
+  span {
+    color: white;
+    border-radius: 6px;
+    padding: 16px 24px;
+    font-weight: 600;
+  }
+}
+
 .scrollable {
   overflow-y: scroll;
 

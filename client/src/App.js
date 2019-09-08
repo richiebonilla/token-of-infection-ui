@@ -82,6 +82,26 @@ class App extends Component {
             zombies={this.state.zombieCount}
             humans={this.state.humanCount}
           />
+          <div
+            style={{
+              display: "flex",
+              justifyContents: "center",
+              paddingTop: "56px",
+              paddingBottom: "32px"
+            }}
+          >
+            <div style={{ margin: "auto" }}>
+              <a
+                class="cta"
+                href="https://opensea.io/category/token-of-infection"
+                target="_blank"
+              >
+                <span style={{ background: "#E655A8", marginRight: "24px" }}>
+                  Find Other Players
+                </span>
+              </a>
+            </div>
+          </div>
           <Readme />
         </div>
         <div className="messageboard-container scrollable">
