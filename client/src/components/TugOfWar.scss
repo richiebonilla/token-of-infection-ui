@@ -18,7 +18,8 @@ $humanColor: #eff99c;
 }
 
 .tug-of-war {
-  @media screen and (max-width: 576px) {
-    display: none;
-  }
+  display: flex;
+  // @media screen and (max-width: 576px) {
+  //   display: none;
+  // }
 }

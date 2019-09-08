@@ -32,6 +32,9 @@ html {
 
 .scoreboard {
   display: flex;
+  @media screen and (max-width: 576px) {
+    display: block;
+  }
 
   &-inner {
     display: flex;

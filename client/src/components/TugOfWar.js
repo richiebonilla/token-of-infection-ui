@@ -33,7 +33,6 @@ class TugOfWar extends Component {
         <div
           className="tug-of-war"
           style={{
-            display: "flex",
             justifyContent: "center",
             paddingTop: "32px"
           }}
