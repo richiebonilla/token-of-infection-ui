@@ -31,6 +31,7 @@ class TugOfWar extends Component {
     return (
       <>
         <div
+          className="tug-of-war"
           style={{
             display: "flex",
             justifyContent: "center",

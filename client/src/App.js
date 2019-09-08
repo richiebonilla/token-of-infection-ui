@@ -49,21 +49,6 @@ class App extends Component {
               ? "The zombies are winning!"
               : "It's a tie!"}
           </h2>
-          <h3
-            style={{
-              fontWeight: 400,
-              marginBottom: "56px",
-              textAlign: "center",
-              marginTop: 0
-            }}
-          >
-            You are a
-            {this.state.team === "zombie" ? (
-              <span className="zombieColor"> {this.state.team}</span>
-            ) : (
-              <span className="humanColor"> {this.state.team}</span>
-            )}
-          </h3>
           <div className="scoreboard">
             <div className="scoreboard-inner">
               <TeamScore
