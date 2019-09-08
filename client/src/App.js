@@ -1,6 +1,4 @@
 import React, { Component } from "react";
-//import Web3Connect from "web3connect";
-import web3Helper from "./web3/web3-helper.js";
 import TeamScore from "./components/TeamScore.js";
 import TugOfWar from "./components/TugOfWar.js";
 import MessageBoard from "./components/MessageBoard.js";
@@ -19,11 +17,14 @@ class App extends Component {
   }
 
   async updateCounts() {
-    let humanCount = await web3Helper.humanCount();
-    let zombieCount = await web3Helper.zombieCount();
-    this.setState({
-      humanCount: parseInt(humanCount, 10),
-      zombieCount: parseInt(zombieCount, 10)
+    fetch("api/getCounts").then(async res => {
+      res = await res.json();
+      let humanCount = res.humanCount;
+      let zombieCount = res.zombieCount;
+      this.setState({
+        humanCount: parseInt(humanCount, 10),
+        zombieCount: parseInt(zombieCount, 10)
+      });
     });
   }
 
